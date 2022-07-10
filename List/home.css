@@ -1,0 +1,56 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #0197b2;
+}
+
+.container {
+    background-color: #00638a;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.container:hover {
+    box-shadow: 0px 0px 15px 5px rebeccapurple;
+}
+
+.list {
+    margin: auto;
+    padding: 100px 114px;
+}
+
+.left {
+    float: left;
+}
+
+.left select {
+    width: 115px;
+    height: 105px;
+}
+
+.center {
+    float: left;
+}
+
+.center input {
+    font-size: 18px;
+    width: 28px;
+    height: 19px;
+    border: none;
+    margin: 3px 7px;
+}
+
+.right {
+    float: left;
+}
+
+.right select {
+    width: 115px;
+    height: 105px;
+}

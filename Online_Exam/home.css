@@ -1,0 +1,110 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: cornflowerblue;
+}
+
+.container {
+    width: 350px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: antiquewhite;
+}
+
+.title {
+    background-color: rgb(206, 100, 206);
+    color: white;
+    width: 350px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.que1 {
+    width: 330px;
+    height: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: skyblue;
+    margin: 0px 10px 0px 10px;
+}
+
+.que2 {
+    width: 330px;
+    height: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: pink;
+    margin: 0px 10px 0px 10px;
+}
+
+.pq {
+    padding: 10px 10px;
+}
+
+.button {
+    margin: auto;
+    margin: 0px 10px 0px 10px;
+}
+
+.button1 {
+    height: 50px;
+    width: 100px;
+    background-color: orange;
+    border: unset;
+    color: white;
+    font-size: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.button2 {
+
+    height: 50px;
+    width: 100px;
+    background-color: green;
+    border: unset;
+    color: white;
+    font-size: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.button3 {
+
+    height: 50px;
+    width: 100px;
+    background-color: red;
+    border: unset;
+    color: white;
+    font-size: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.output {
+    margin: auto;
+    margin: 0px 10px 0px 10px;
+}
+
+.output input {
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 150px;
+    height: 18px;
+}
+
+.outlab {
+    width: 150px;
+    display: inline-block;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+    display: none;
+    float: right;
+}

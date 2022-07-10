@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Online Exam</div>
+        <br>
+        <div class="que1">
+            <p class="pq"> Q.1-->12+13? <br>
+                A<input type="radio" name="q1"  value="21" id="q1a" onchange="que1()"><label>21</label>
+                B<input type="radio" name="q1" value="25" id="q1b" onchange="que1()"><label>25</label>
+                C<input type="radio" name="q1" value="27" id="q1c" onchange="que1()"><label>27</label>
+                <img class="img" src="" alt="" id="img1">
+            </p>
+        </div>
+        <div class="que2">
+            <p class="pq"> Q.2-->5*12?<br>
+                A<input type="radio" name="q2" value="60" id="q2a" onchange="que2()"><label>60</label>
+                B<input type="radio" name="q2" value="85" id="q2b" onchange="que2()"><label>85</label>
+                C<input type="radio" name="q2" value="70" id="q2c" onchange="que2()"><label>70</label>
+                <img class="img" src="" alt="" id="img2">
+            </p>
+        </div>
+        <div class="que1">
+            <p class="pq"> Q.3-->65-10+90? <br>
+                A<input type="radio" name="q3" value="145" id="q3a" onchange="que3()"><label>145</label>
+                B<input type="radio" name="q3" value="155" id="q3b" onchange="que3()"><label>155</label>
+                C<input type="radio" name="q3" value="135" id="q3c" onchange="que3()"><label>135</label>
+                <img class="img" src="" alt="" id="img3">
+            </p>
+        </div>
+        <div class="que2">
+            <p class="pq"> Q.4-->128/8?<br>
+                A<input type="radio" name="q4" value="24" id="q4a" onchange="que4()"><label>24</label>
+                B<input type="radio" name="q4" value="12" id="q4b" onchange="que4()"><label>12</label>
+                C<input type="radio" name="q4" value="16" id="q4c" onchange="que4()"><label>16</label>
+                <img class="img" src="" alt="" id="img4">
+            </p>
+        </div>
+        <div class="que1">
+            <p class="pq"> Q.5-->12+13? <br>
+                A<input type="radio" name="q5" value="12" id="q5a" onchange="que5()"><label>12</label>
+                B<input type="radio" name="q5" value="16" id="q5b" onchange="que5()"><label>16</label>
+                C<input type="radio" name="q5" value="25" id="q5c" onchange="que5()"><label>25</label>
+                <img class="img" src="" alt="" id="img5">
+            </p>
+        </div>
+
+        <div class="button"><br>
+            <!-- <input class="button1" type="button" value="Submit" id="submit" onclick="marks()"> -->
+            <input class="button2" type="button" value="Clear" id="clear" onclick="funclear()">
+            <input class="button3" type="button" value="Exit" id="exit" onclick="funexit()">
+        </div><br>
+        <div class="output">
+            <label class="outlab">Attend:-</label><input type="text" id="txtat"><br>
+            <label class="outlab">UnAttend:-</label><input type="text" id="txtut"><br>
+            <label class="outlab">Wrong Answer:-</label><input type="text" id="txtwt"><br>
+            <label class="outlab">Right Answer:-</label><input type="text" id="txtrt"><br>
+
+            <label class="outlab">Get Marks:-</label><input type="text" id="txtgm"><br>
+            <label class="outlab">Cut of Marks:-</label><input type="text" id="txtcm"><br>
+            <label class="outlab">Result Marks:-</label><input type="text" id="txtrm"><br>
+        </div><br>
+    </div>
+</body>
+
+
+<script>
+    var at = 0,
+        ut = 0,
+        wt = 0,
+        rt = 0;
+
+
+    function que1() {
+
+        // que1
+        if (q1a.checked == false && q1b.checked == false && q1c.checked == false) {
+            ut++
+        } else if (q1b.checked == true) {
+            rt++;
+            at++;
+            document.getElementById("img1").src = "right.png";
+            document.getElementById("img1").style.display = "block";
+            var audio1 = new Audio('right.mp3');
+            audio1.play();
+            q1a.disabled="true";
+            q1b.disabled="true";
+            q1c.disabled="true";
+        
+        } else {
+            wt++;
+            at++;
+            document.getElementById("img1").src = "wrong.png";
+            document.getElementById("img1").style.display = "block";
+            var audio1 = new Audio('wrong.mp3');
+            audio1.play();
+            q1a.disabled="true";
+            q1b.disabled="true";
+            q1c.disabled="true";
+        }
+
+        txtat.value = at;
+        txtut.value = ut;
+        txtwt.value = wt;
+        txtrt.value = rt;
+
+        txtgm.value = rt * 5;
+        txtcm.value = wt * 2;
+        txtrm.value = txtgm.value - txtcm.value;
+    }
+
+    function que2() {
+
+        // que2
+        if (q2a.checked == false && q2b.checked == false && q2c.checked == false) {
+            ut++
+        } else if (q2a.checked == true) {
+            rt++;
+            at++;
+            document.getElementById("img2").src = "right.png";
+            document.getElementById("img2").style.display = "block";
+            var audio1 = new Audio('right.mp3');
+            audio1.play();
+            q2a.disabled="true";
+            q2b.disabled="true";
+            q2c.disabled="true";
+        } else {
+            wt++;
+            at++;
+            document.getElementById("img2").src = "wrong.png";
+            document.getElementById("img2").style.display = "block";
+            var audio1 = new Audio('wrong.mp3');
+            audio1.play();
+            q2a.disabled="true";
+            q2b.disabled="true";
+            q2c.disabled="true";
+        }
+
+        txtat.value = at;
+        txtut.value = ut;
+        txtwt.value = wt;
+        txtrt.value = rt;
+
+        txtgm.value = rt * 5;
+        txtcm.value = wt * 2;
+        txtrm.value = txtgm.value - txtcm.value;
+    }
+
+    function que3() {
+
+        // que3
+        if (q3a.checked == false && q3b.checked == false && q3c.checked == false) {
+            ut++
+        } else if (q3a.checked == true) {
+            rt++;
+            at++;
+            document.getElementById("img3").src = "right.png";
+            document.getElementById("img3").style.display = "block";
+            var audio1 = new Audio('right.mp3');
+            audio1.play();
+            q3a.disabled="true";
+            q3b.disabled="true";
+            q3c.disabled="true";
+        } else {
+            wt++;
+            at++;
+            document.getElementById("img3").src = "wrong.png";
+            document.getElementById("img3").style.display = "block";
+            var audio1 = new Audio('wrong.mp3');
+            audio1.play();
+            q3a.disabled="true";
+            q3b.disabled="true";
+            q3c.disabled="true";
+        }
+
+        txtat.value = at;
+        txtut.value = ut;
+        txtwt.value = wt;
+        txtrt.value = rt;
+
+        txtgm.value = rt * 5;
+        txtcm.value = wt * 2;
+        txtrm.value = txtgm.value - txtcm.value;
+    }
+
+    function que4() {
+
+        // que4
+        if (q4a.checked == false && q4b.checked == false && q4c.checked == false) {
+            ut++
+        } else if (q4c.checked == true) {
+            rt++;
+            at++;
+            document.getElementById("img4").src = "right.png";
+            document.getElementById("img4").style.display = "block";
+            var audio1 = new Audio('right.mp3');
+            audio1.play();
+            q4a.disabled="true";
+            q4b.disabled="true";
+            q4c.disabled="true";
+        } else {
+            wt++;
+            at++;
+            document.getElementById("img4").src = "wrong.png";
+            document.getElementById("img4").style.display = "block";
+            var audio1 = new Audio('wrong.mp3');
+            audio1.play();
+            q4a.disabled="true";
+            q4b.disabled="true";
+            q4c.disabled="true";
+        }
+
+        txtat.value = at;
+        txtut.value = ut;
+        txtwt.value = wt;
+        txtrt.value = rt;
+
+        txtgm.value = rt * 5;
+        txtcm.value = wt * 2;
+        txtrm.value = txtgm.value - txtcm.value;
+    }
+
+    function que5() {
+
+
+        // que5
+        if (q5a.checked == false && q5b.checked == false && q5c.checked == false) {
+            ut++
+        } else if (q5c.checked == true) {
+            rt++;
+            at++;
+            document.getElementById("img5").src = "right.png";
+            document.getElementById("img5").style.display = "block";
+            var audio1 = new Audio('right.mp3');
+            audio1.play();
+            q5a.disabled="true";
+            q5b.disabled="true";
+            q5c.disabled="true";
+        } else {
+            wt++;
+            at++;
+            document.getElementById("img5").src = "wrong.png";
+            document.getElementById("img5").style.display = "block";
+            var audio1 = new Audio('wrong.mp3');
+            audio1.play();
+            q5a.disabled="true";
+            q5b.disabled="true";
+            q5c.disabled="true";
+        }
+        txtat.value = at;
+        txtut.value = ut;
+        txtwt.value = wt;
+        txtrt.value = rt;
+
+        txtgm.value = rt * 5;
+        txtcm.value = wt * 2;
+        txtrm.value = txtgm.value - txtcm.value;
+    }
+
+
+
+
+    // function marks() {
+
+
+    //     // que2
+    //     if (q2a.checked == false && q2b.checked == false && q2c.checked == false) {
+    //         ut++
+    //     } else if (q2a.checked == true) {
+    //         rt++;
+    //         at++;
+    //         document.getElementById("img2").src = "right.png";
+    //         document.getElementById("img2").style.display = "block";
+    //         var audio1 = new Audio('right.mp3');
+    //         audio1.play();
+    //     } else {
+    //         wt++;
+    //         at++;
+    //         document.getElementById("img2").src = "wrong.png";
+    //         document.getElementById("img2").style.display = "block";
+    //         var audio1 = new Audio('wrong.mp3');
+    //         audio1.play();
+    //     }
+
+    //     // que3
+    //     if (q3a.checked == false && q3b.checked == false && q3c.checked == false) {
+    //         ut++
+    //     } else if (q1a.checked == true) {
+    //         rt++;
+    //         at++;
+    //         document.getElementById("img3").src = "right.png";
+    //         document.getElementById("img3").style.display = "block";
+    //         var audio1 = new Audio('right.mp3');
+    //         audio1.play();
+    //     } else {
+    //         wt++;
+    //         at++;
+    //         document.getElementById("img3").src = "wrong.png";
+    //         document.getElementById("img3").style.display = "block";
+    //         var audio1 = new Audio('wrong.mp3');
+    //         audio1.play();
+    //     }
+
+    //     // que4
+    //     if (q4a.checked == false && q4b.checked == false && q4c.checked == false) {
+    //         ut++
+    //     } else if (q1c.checked == true) {
+    //         rt++;
+    //         at++;
+    //         document.getElementById("img4").src = "right.png";
+    //         document.getElementById("img4").style.display = "block";
+    //         var audio1 = new Audio('right.mp3');
+    //         audio1.play();
+    //     } else {
+    //         wt++;
+    //         at++;
+    //         document.getElementById("img4").src = "wrong.png";
+    //         document.getElementById("img4").style.display = "block";
+    //         var audio1 = new Audio('wrong.mp3');
+    //         audio1.play();
+    //     }
+
+
+    //     // que5
+    //     if (q5a.checked == false && q5b.checked == false && q5c.checked == false) {
+    //         ut++
+    //     } else if (q1c.checked == true) {
+    //         rt++;
+    //         at++;
+    //         document.getElementById("img5").src = "right.png";
+    //         document.getElementById("img5").style.display = "block";
+    //         var audio1 = new Audio('right.mp3');
+    //         audio1.play();
+    //     } else {
+    //         wt++;
+    //         at++;
+    //         document.getElementById("img5").src = "wrong.png";
+    //         document.getElementById("img5").style.display = "block";
+    //         var audio1 = new Audio('wrong.mp3');
+    //         audio1.play();
+    //     }
+
+
+    // txtat.value = at;
+    // txtut.value = ut;
+    // txtwt.value = wt;
+    // txtrt.value = rt;
+
+    // txtgm.value = rt * 5;
+    // txtcm.value = wt * 2;
+    // txtrm.value = txtgm.value - txtcm.value;
+
+    // }
+
+    function funclear() {
+
+
+        txtat.value = "";
+        txtut.value = "";
+        txtwt.value = "";
+        txtrt.value = "";
+
+        txtgm.value = "";
+        txtcm.value = "";
+        txtrm.value = "";
+    }
+
+
+    function funexit() {
+        window.close();
+    }
+</script>
+
+</html>

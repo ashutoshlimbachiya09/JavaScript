@@ -1,0 +1,192 @@
+@## for loop
+
+pr:1
+1 to 10
+1
+2
+dishant 3
+4
+5
+6
+7
+kunj 8
+9
+10
+
+pr2:
+1 to 10		using 2 for loop
+odd values: 1,3,5,7,9
+oddsum=25
+
+even values:2,4,6,8,10
+evensum=30
+
+
+pr3:
+1 to 10		using ony 1 for loop
+
+Odd		Even
+1		2	<br>
+3		4
+5		6
+7		8
+9		10
+osum=25		esum=30
+ocount=5		ecount=5
+
+pr4:
+1 to 100
+3 & 7== 21,42,63,84
+
+
+
+pr5:
+enter value: 5
+factorial   5!
+5x4x3x2x1=120
+
+
+
+
+enter the value :5
+5 x 1 = 5
+5 x 2 = 10
+5 x 3= 15
+.
+.
+.
+.
+5 x 10= 50
+
+
+
+enter the starting value a :5
+
+enter the ending value b  :5000
+
+***  Multiplication Table of 5 To 5000 ******
+
+5 x 1 = 5
+5 x 2 = 10
+5 x 3= 15
+.
+.
+.
+.
+5 x 10= 50
+------------------------
+6 x 1 = 5
+6 x 2 = 10
+6 x 3= 15
+.
+.
+.
+.
+6 x 10= 50
+------------------------
+50 x 1 = 50
+50 x 2 = 100
+50 x 3= 150
+.
+.
+.
+.
+50 x 10= 500
+------------------------
+
+
+-------------------------------------------------------------------------------------------------
+
+@ perfect number
+enter no: 6                                      <6(1,2,3,4,5)
+1 2 3 
+1+2+3=6  this is perfect no / this is not perfect no
+other=28
+
+@ perfect number from 1 to 1000         6,28,496
+
+
+@ harmonic 
+enter number =5
+
+1/1 + 1/2 + 1/3 + 1/4 + 1/5 = 2.28
+
+
+@prime not prime
+enter value :49
+
+not prime (vibhajya)   1 to 100
+prime (Avibhajya)
+
+
+
+@fibonacci
+enter no:10
+0,1,1,2,3,5,8,13,21,34
+
+
+@while loop
+
+odd even
+gadiyo
+multi multiplication
+perfect
+
+@reverse
+476
+
+674
+
+
+
+@palindrome not /palindrome
+enter value:141
+
+ex.1221=1221  palindrome
+
+141=141  palindrome number
+
+145=541 not palindrome
+
+@1  enter  1 to 100
+find out  palindrome number    11 22 33 44 55 66 77 88 99    101 121
+
+
+@2  Armstrong Number
+
+enter number=153
+
+1x1x1=1
+5x5x5=125
+3x3x3=27
+--------------
+           153
+
+armstrong/not armstrong
+
+@3  1 to 1000 Armstrong
+find out Armstrong number from 1 to 1000
+
+1, 153, 370,371,407
+
+
+@4 Niven Number
+
+enter number=54
+5 and 4
+5+4=9
+div(54)%9==0
+this is niven number
+not niven number
+
+
+@5 Niven Number from 1 to 1000
+
+
+
+@@@@@@For java@@@ 9-5-2020
+
+@GCD
+enter the value 1:15
+enter the value 2:45
+gcd=15

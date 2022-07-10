@@ -1,0 +1,66 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+}
+p label{
+    width:150px;
+    display: inline-block;
+}
+
+body
+{
+    background-color: blueviolet;
+    
+}
+
+.main
+{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    border:solid white 7px;
+}
+.title
+{
+    margin-top: 20px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+.content
+{
+    margin: auto;
+    margin-left: 20px;
+}
+.age
+{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 180px;
+    height: 18px;
+}
+.button
+{
+    margin-top: 15px;
+    margin-left: 140px;
+    height: 40px;
+    width: 80px;
+    background-color: brown;
+    border: unset;
+    color: white;
+    font-size: 15px;
+}
+.output
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 180px;
+    height: 18px;
+}
+
+p
+{
+    color: white;
+}

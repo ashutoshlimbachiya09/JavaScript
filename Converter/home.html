@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <script>
+        function fun1() {
+            if (txt1.value == "") {
+                alert("Please Enter Value");
+            } else {
+                var a, b;
+                a = parseFloat(txt1.value);
+                b = a * 70.33;
+                txt2.value = b;
+            }
+        }
+
+        function fun2() {
+            if (txt1.value == "") {
+                alert("Please Enter Value")
+            } else {
+                var a, b;
+                a = parseFloat(txt1.value);
+                b = a / 70.33;
+                txt2.value = b;
+
+            }
+        }
+
+        function fun3() {
+            if (txt1.value == "") {
+                alert("Please Enter Value")
+            } else {
+                var a, b;
+                a = parseFloat(txt1.value);
+                b = a / 30.48;
+                txt2.value = b;
+
+            }
+        }
+        function fun4() {
+            if (txt1.value == "") {
+                alert("Please Enter Value")
+            } else {
+                var a, b;
+                a = parseFloat(txt1.value);
+                b = a * 3281;
+                txt2.value = b;
+
+            }
+        }
+        function fun5() {
+            if (txt1.value == "") {
+                alert("Please Enter Value")
+            } else {
+                var a, b;
+                a = parseFloat(txt1.value);
+                b = a / 2.205;
+                txt2.value = b;
+
+            }
+        }
+        function fun6() {
+            if (txt1.value == "") {
+                alert("Please Enter Value")
+            } else {
+                var a, b;
+                a = parseFloat(txt1.value);
+                b = (a - 32)*.5556;
+                txt2.value = b;
+
+            }
+        }
+        function funexit() {
+            window.close();
+        }
+    </script>
+
+    <div class="container">
+        <div class="title">Converter</div>
+        <div class="input">Enter Value <input type="number" id="txt1"> =
+            <input type="number" id="txt2">
+        </div>
+        <div class="bottom">
+            <input class="btn" type="button" value="D to Rs." onclick="fun1()">
+            <input class="btn" type="button" value="Rs. to D" onclick="fun2()">
+            <input class="btn" type="button" value="Cm. to Foot" onclick="fun3()"><br>
+            <input class="btn" type="button" value="Km. to Foot" onclick="fun4()">
+            <input class="btn" type="button" value="Pound to Kg." onclick="fun5()">
+            <input class="btn" type="button" value="F to C" onclick="fun6()"><br>
+            <input class="btn" type="button" value="Exit" onclick="funexit()">
+        </div>
+    </div>
+</body>
+
+</html>

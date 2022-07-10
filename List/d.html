@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            border: 2px solid gray;
+            padding: 20px;
+            background-color: skyblue;
+        }
+    </style>
+
+
+
+</head>
+
+<body onload="myfun1()">
+
+    <div class="box" id="box">
+
+    </div>
+
+
+
+    <script>
+        function myfun1() {
+
+            var l1 = document.createElement("label");
+            l1.innerHTML = "Username:";
+
+            l1.style.color = "blue";
+            box.appendChild(l1);
+
+
+            var t1 = document.createElement("input");
+            t1.type = "text";
+            t1.id = "txt1";
+            t1.style.width = "120px";
+            box.appendChild(t1);
+
+            box.appendChild(document.createElement("br"));
+            box.appendChild(document.createElement("br"));
+
+
+            var l2 = document.createElement("label");
+            l2.innerHTML = "Password:";
+            l2.style.color = "blue";
+            box.appendChild(l2);
+
+
+            var t2 = document.createElement("input");
+            t2.type = "text";
+            t2.id = "txt2";
+            t2.style.width = "120px";
+            box.appendChild(t2);
+
+
+            box.appendChild(document.createElement("br"));
+            box.appendChild(document.createElement("br"));
+
+
+            var l2 = document.createElement("label");
+            l2.innerHTML = "City";
+            l2.style.color = "blue";
+            box.appendChild(l2);
+
+
+            var d1 = document.createElement("select");
+            d1.id = "drop1";
+            d1.style.width = "120px";
+            box.appendChild(d1);
+            var op1 = document.createElement("option");
+            op1.innerHTML = "Himatnagar";
+            op1.value = "Himatnagar";
+            d1.appendChild(op1);
+            var op2 = document.createElement("option");
+            op2.innerHTML = "Modasa";
+            op2.value = "Modasa";
+            d1.appendChild(op2);
+
+
+            box.appendChild(document.createElement("br"));
+            box.appendChild(document.createElement("br"));
+
+            var b1 = document.createElement("input");
+            b1.type = "button";
+            b1.id = "btn1";
+            b1.value = "Click here";
+            box.appendChild(b1);
+
+
+
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

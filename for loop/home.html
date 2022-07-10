@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            padding: 20px;
+            background-color: lightsalmon;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+        <input type="button" name="" id="btn1" value="1 to 10" onclick="myfun()">
+        <input type="button" value="OOD EVEN" id="btn2" onclick="myfun1()">
+    </div>
+</body>
+<script>
+    function myfun() {
+        for (var i = 1; i <= 10; i++) {
+            if (i == 3) {
+                document.write("Bhuvan")
+            }
+            if (i == 8) {
+                document.write("Ashutosh")
+            }
+            document.write(i + "<br>")
+        }
+    }
+    var osum = 0,
+        esum = 0;
+    function myfun1() {
+        document.write("ODD NUMBERS")
+        document.write("<br>");
+
+        for (var i = 1; i <= 10; i++) {
+            if (i % 2 == 1) {
+                osum = osum + i;
+                document.write(i)
+            }
+        }
+        document.write("<br> ODD SUM=", osum)
+        document.write("<br>");
+        document.write("<br>");
+        document.write("EVEN NUMBERS")
+        document.write("<br>");
+
+        for (var i = 1; i <= 10; i++) {
+            if (i % 2 == 0) {
+                esum = esum + i;
+                document.write(i)
+            }
+        }
+        document.write("<br> EVEN SUM=", esum)
+    }    
+</script>
+
+</html>

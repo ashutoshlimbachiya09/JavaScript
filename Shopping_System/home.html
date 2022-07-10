@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <script>
+        function funshop() {
+
+            if (name1.value == "" || pname.value == "" || price.value == "" || qty.value == "") {
+                alert("Please Enter Values");
+            } else {
+
+                var a, b, c, d;
+                a = name1.value;
+                b = pname.value;
+                c = parseInt(price.value);
+                d = parseInt(qty.value);
+
+                var am, td, n, m;
+                //am=parseInt(amount.value);
+                //td=parseInt(dis.value);
+                //n=parseInt(net.value);
+
+                am = c * d;
+                amount.value = am;
+
+                if (am > 1500) {
+                    td = am * 15 / 100;
+                    dis.value = td;
+                    dmsg.innerHTML = "Discount 15%"
+
+                } else if (am > 1000) {
+                    td = am * 10 / 100;
+                    dis.value = td;
+                    dmsg.innerHTML = "Discount 10%"
+                } else if (am > 500) {
+                    td = am * 5 / 100;
+                    dis.value = td;
+                    dmsg.innerHTML = "Discount 5%"
+                } else {
+                    td = am * 0 / 100;
+                    dis.value = td;
+                    dmsg.innerHTML = "Discount 0%"
+                }
+
+                n = am - td;
+                net.value = n;
+
+                m = a;
+                msg.innerHTML = "Thank You For Shopping " + m + " Good Luck";
+
+            }
+        }
+
+        function funclear() {
+            name1.value = "";
+            pname.value = "";
+            price.value = "";
+            qty.value = "";
+
+            amount.value = "";
+            dis.value = "";
+            net.value = "";
+
+        }
+
+        function funexit() {
+            window.close();
+        }
+    </script>
+
+    <div class="main">
+        <div class="title">Shopping System</div>
+        <div class="content">
+            <div class="content2">
+                <p><label>Enter Customer Name:</label><input type="text" id="name1"></p><br>
+                <p><label>Enter Product Name:</label><input type="text" id="pname"></p><br>
+                <p><label>Enter Product Price:</label><input type="number" id="price"></p><br>
+                <p><label>Enter Product QTY:</label><input type="number" id="qty"></p><br>
+
+                <input class="button" type="button" value="Submit" onclick="funshop()">
+                <input class="button" type="button" value="Clear" onclick="funclear()">
+                <input class="button" type="button" value="Exit" onclick="funexit()"><br><br>
+
+                <p class="output"><label>Total Amount:</label><input type="number" id="amount"></p><br>
+                <p class="output"><label>Total Discount:</label><input type="number" id="dis"><label id="dmsg"></label>
+                </p><br>
+                <p class="output"><label>Net Price:</label><input type="number" id="net"></p><br>
+                <p><label class="msg" id="msg"></label></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+*
+{
+    margin: 0px;
+    padding: 0px;    
+}
+body
+{
+    background-color:gold;
+}
+.main
+{
+    height: 500px;
+    width: 800px;
+    background-color:white;
+    margin: auto;
+    margin-top: 50px;
+    border: solid goldenrod 7px;
+}
+.title
+{
+    margin-top: 15px;
+    font-size: 35px;
+    color: black;
+    text-align: center;
+}
+p label{
+    width:150px;
+    display: inline-block;
+    color: black;
+}
+
+.button
+{
+    margin-top: 15px;
+    margin-left: 20px;
+    height: 40px;
+    width: 80px;
+    background-color: goldenrod;
+    border: unset;
+    color: white;
+    font-size: 15px;
+}
+.content2
+{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.msg
+{
+    width: 300px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+<script>
+        function funage()
+        {
+            if(age.value=="")
+            {
+                alert("Please Enter Your Age!")
+            }
+            else
+            {   
+
+            var a;
+            a=parseInt(age.value);
+            var m,w,d,h,mm,s;
+
+            m=a*12;
+            w=m*4;
+            d=w*7;
+            h=d*24;
+            mm=h*60;
+            s=mm*60;
+            
+            months.value=m;
+            weeks.value=w;
+            days.value=d;
+            hours.value=h;
+            minutes.value=mm;
+            seconds.value=s;
+            }   
+        }
+       
+</script>
+
+    <div class="main">
+        <div class="title">Age Calculator</div>
+        <div class="content">
+            <p>Enter your Age:<input class="age" type="number" id="age"></p>
+            <input class="button" type="button" value="Click Here" onclick="funage()">           
+           <p><label> Your Total Months:</label><input class="output" type="text" id="months"></p>
+           <p><label> Your Total Weeks:</label><input class="output" type="text" id="weeks"></p>
+           <p><label> Your Total Days:</label><input class="output" type="text" id="days"></p>
+           <p><label> Your Total Hours:</label><input class="output" type="text" id="hours"></p>
+           <p><label> Your Total Minutes:</label><input class="output" type="text" id="minutes"></p>
+           <p><label> Your Total Seconds:</label><input class="output" type="text" id="seconds"></p>
+        </div>
+            
+    </div>
+</body>
+</html>
+

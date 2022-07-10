@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<script>
+
+
+function funsum()
+{
+
+if(txt1.value==""||txt2.value=="")
+{
+    alert("please enter value");
+}
+else{
+
+var a,b,t;
+a=parseInt( txt1.value);
+b=parseInt( txt2.value);
+
+t=a+b;
+    
+txt3.value=t;
+
+lbl1.innerHTML=t;
+
+}
+}
+
+function funsub()
+{
+
+if(txt1.value==""||txt2.value=="")
+{
+    alert("please enter value");
+}
+else{
+
+var a,b,t;
+a=parseInt( txt1.value);
+b=parseInt( txt2.value);
+
+t=a-b;
+
+txt3.value=t;
+
+lbl1.innerHTML=t;
+
+}
+}
+
+function funmul()
+{
+
+if(txt1.value==""||txt2.value=="")
+{
+    alert("please enter value");
+}
+else{
+
+var a,b,t;
+a=parseInt( txt1.value);
+b=parseInt( txt2.value);
+
+t=a*b;
+
+txt3.value=t;
+
+lbl1.innerHTML=t;
+
+}
+}
+
+function fundiv()
+{
+
+if(txt1.value==""||txt2.value=="")
+{
+    alert("please enter value");
+}
+else{
+
+var a,b,t;
+a=parseInt( txt1.value);
+b=parseInt( txt2.value);
+
+t=a/b;
+
+txt3.value=t;
+
+lbl1.innerHTML=t;
+
+}
+}
+
+
+function funclear()
+{
+    txt1.value="";
+    txt2.value="";
+    txt3.value="";
+    lbl1.innerHTML="";
+}
+
+function funexit()
+{
+    window.close();
+}
+
+
+</script>
+<div class="main">
+    <div class="cal">
+        <div class="title">Calculator</div><br>
+        <div>Enter the value 1: <input type="text"  id="txt1"></div><br>
+        <div>Enter the value 2: <input type="text"  id="txt2"></div><br>      
+             <p>
+                <input type="button" value="Sum" onclick="funsum()">
+                <input type="button" value="Sub" onclick="funsub()">
+                <input type="button" value="Mul" onclick="funmul()">
+                <input type="button" value="Div" onclick="fundiv()">
+            
+            </p><br>
+                <input type="button" value="Clear" onclick="funclear()">
+                    <input type="button" value="Exit" onclick="funexit()">
+                        
+            
+            <p><br>
+                Result: <input type="text"  id="txt3">
+                </p>
+                <br>
+                <p>
+                    Total=<label id="lbl1"></label>
+                </p>
+
+    </div>
+</div>
+</body>
+</html>

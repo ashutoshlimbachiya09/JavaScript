@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="list">
+            <div class="left">
+                <select name="cars" id="names" multiple>
+                    <option value="Hetvi" id="op1">Hetvi</option>
+                    <option value="Rutva" id="op2">Rutva</option>
+                    <option value="Bhuvan" id="op3">Bhuvan</option>
+                    <option value="Ashutosh" id="op4">Ashutosh</option>
+                </select>
+            </div>
+            <div class="center">
+                <input type="button" value=">" id="btn1" onclick="fun1()"><br>
+                <input type="button" value="<" id="btn2" onclick="fun2()"><br>
+                <input type="button" value=">>" id="btn3" onclick="fun3()"><br>
+                <input type="button" value="<<" id="btn4" onclick="fun4()"><br>
+            </div>
+            <div class="right">
+                <select name="cars" id="cars" multiple>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    function fun1() {
+
+        var lt1 = document.createElement("option");
+        lt1.innerHTML = names.value;
+        lt1.value = names.value;
+        cars.appendChild(lt1);
+        names.removeChild(names.options[names.options.selectedIndex]);
+
+    }
+    function fun2(){
+        var lt2 = document.createElement("option");
+        lt2.innerHTML = cars.value;
+        lt2.value = cars.value;
+        names.appendChild(lt2);
+        cars.removeChild(cars.options[cars.options.selectedIndex]);
+    }
+</script>
+
+
+</html>
