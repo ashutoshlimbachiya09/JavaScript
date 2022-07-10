@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sw">
+        <h1>StopWatch</h1>
+        <p> <span id="lblhour">00</span>:
+            <span id="lblmin">00</span>: 
+            <span id="lblsecs">00</span>: 
+            <span id="lblmili">00</span> 
+        </p>
+        <input type="button" value="Start" id="btn1" onclick="starttime()">
+        <input type="button" value="Stop" id="btn2" onclick="stoptime()">
+        <input type="button" value="Restart" id="btn3" onclick="resettime()">
+    </div>
+</body>
+<script>
+    var secs = 0;
+    var mili = 0;
+    var min = 0;
+    var hour = 0;
+    var timer;
+
+    function myTimer() {
+        mili++;
+        lblmili.innerHTML = mili;
+
+        if (mili == 100) {
+            secs++;
+            lblsecs.innerHTML = secs;
+            mili = 0;
+
+        }
+        if (secs == 60) {
+            min++;
+            lblmin.innerHTML = min;
+            secs = 0;
+
+        }
+        if (min == 60) {
+            hour++;
+            lblhour.innerHTML = hour;
+            min = 0;
+        }
+    }
+
+
+    function starttime() {
+
+        timer = setInterval(myTimer, 1);
+    }
+    function stoptime(){
+
+        clearInterval(timer);
+    }
+
+    function resettime() {
+        clearInterval(timer);
+        mili = 00;
+        lblmili.innerHTML = "00";
+        secs = 00;
+        lblsecs.innerHTML = "00";
+        min = 00;
+        lblmin.innerHTML = "00";
+        hour = 00;
+        lblhour.innerHTML = "00";
+
+    }
+</script>
+
+</html>

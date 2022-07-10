@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        var count = 0;
+        var timer;
+        function timerCounter() {
+            count++;
+            lbl1.innerHTML = count;
+           
+        }
+
+        function btn1Click() {
+          timer = setInterval(timerCounter, 1000);
+
+        }
+
+        function btn2Click() {
+            clearInterval(timer);
+        }
+
+        function btn3click() {
+            clearInterval(timer);
+            lbl1.innerHTML = "0";
+            count = 0;
+        }
+    </script>
+
+</head>
+<body>
+<div class="box">
+    <label id="lbl1" onclick="timerCounter()"></label>
+    <br><br>
+    <input type="button" value="Start" id="btn1" onclick="btn1Click()">
+    <input type="button" value="Stop" id="btn2" onclick="btn2Click()">
+    <input type="button" value="Clear" id="btn3" onclick="btn3click()">
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgb(118, 118, 241);
+
+}
+select{
+    align-items: center;
+}
+select option{
+    align-items: center;
+}

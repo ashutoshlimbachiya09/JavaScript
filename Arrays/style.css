@@ -1,0 +1,40 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: cadetblue;
+    color: white;
+    font-family: 'Lucida Sans';
+}
+.container {
+    width: 600px;
+    height: 400px;
+    background-color: #00638a;
+    margin: auto;
+    margin-top: 50px;
+    /* text-align: center; */
+}
+.container:hover{
+    box-shadow: 0px 0px 15px 5px rgb(25, 76, 77);
+}
+.box{
+    margin-left: 55px;
+    padding-top: 33px;
+}
+.box input{
+    margin: 11px 11px 11px 11px;
+    margin-left: 11px;
+    width: 149px;
+    height: 27px;
+    border: none;
+    box-sizing: border-box;   
+}
+.btn{
+    border: unset;
+    font-family: 'Lucida Sans';
+}
+.btn:hover{
+    background-color:cadetblue;
+    color: white;
+}

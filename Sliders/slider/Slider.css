@@ -1,0 +1,76 @@
+        body {
+            background-color: darkgray;
+        }
+        
+        .containt {
+            background-color: darkgray;
+        }
+        
+        .box {
+            width: 5000px;
+            height: 460px;
+            margin: auto;
+            position: absolute;
+            animation: silder 5s linear infinite;
+        }
+        
+        .fream {
+            width: 958px;
+            height: 460px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border: 10px solid black;
+        }
+        
+        @keyframes silder {
+            10% {
+                transform: translateX(-958px);
+                opacity: 0.2;
+            }
+            20% {
+                transform: translateX(-958px);
+                opacity: 1;
+            }
+            30% {
+                transform: translateX(-1916px);
+                opacity: 0.2;
+            }
+            40% {
+                transform: translateX(-1916px);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(-2874px);
+                opacity: 0.2;
+            }
+            60% {
+                transform: translateX(-2874px);
+                opacity: 1;
+            }
+            70% {
+                transform: translateX(0px);
+                opacity: 0.2;
+            }
+            80% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+            90% {
+                transform: translateX(0px);
+                opacity: 0.2;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+        
+        .box img {
+            display: inline-block;
+            /* background-size: cover; */
+        }
+        
+        .section {
+            float: left;
+        }
